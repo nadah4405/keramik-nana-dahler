@@ -1,0 +1,47 @@
+<nav id="sidebar" data-behavior="{{ .Scratch.Get "sidebarBehavior" }}">
+  <div class="sidebar-container">
+    {{ with ($.Scratch.Get "authorPicture") }}
+      <div class="sidebar-profile">
+        <a href="{{ if $.Site.Params.sidebar.profile.url }}{{ $.Site.Params.sidebar.profile.url }}{{ else }}{{ "/#about" }}{{ end }}" aria-label="{{ i18n "global.read_more_about_author"}}">
+          <img class="sidebar-profile-picture" src="{{ . }}{{ if in . "//www.gravatar.com/avatar/" }}?s=110{{ end }}" alt="{{ i18n "global.author_picture" }}" />
+        </a>
+        <h4 class="sidebar-profile-name">{{ $.Site.Author.name }}</h4>
+        {{ with $.Site.Author.bio }}
+          <h5 class="sidebar-profile-bio">{{ . | markdownify }}</h5>
+        {{ end }}
+      </div>
+    {{ end }}
+
+    <ul class="sidebar-buttons">
+      {{ $currentPage := .Permalink | relURL }}
+      {{ range .Site.Menus.main }}
+        {{ if and (.HasChildren) (hasPrefix $currentPage .URL) }}
+          <li class="sidebar-button">
+            <a href="{{ .URL }}" class="sidebar-button-link">
+              {{ .Pre }}
+              <span class="sidebar-button-desc">{{ .Name }}</span>
+            </a>
+          </li>
+          <ul class="sidebar-buttons sidebar-sub-buttons">
+            {{ range .Children }}
+            <li  class="sidebar-button">
+              <a href="{{ .URL }}" class="sidebar-button-link sidebar-button-sub-link">
+                {{ .Pre }}
+                <span class="sidebar-button-desc">{{ .Name }}</span>
+              </a>
+            </li>
+            {{ end }}
+          </ul>
+        {{ else }}
+          <li class="sidebar-button">
+            <a href="{{ .URL }}" class="sidebar-button-link">
+              {{ .Pre }}
+              <span class="sidebar-button-desc">{{ .Name }}</span>
+            </a>
+          </li>
+        {{ end }}
+      {{ end }}
+    </ul>
+
+  </div>
+</nav>

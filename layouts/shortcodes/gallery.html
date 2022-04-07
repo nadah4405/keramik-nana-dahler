@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+
+{{ partial "lightbox-options.html" . }}
+
+{{ $image := (.Page.Resources.ByType "image") }}
+<div class="gallery-wrap">
+{{ with $image }}
+    {{ range . }}
+        {{ $resized := .Resize "x200" }}
+        {{ $captionFile := strings.Replace .RelPermalink ".jpg" ".md" }}
+        {{ $caption := "" }}
+        {{ if fileExists $captionFile }}
+            {{ $caption = os.ReadFile $captionFile }}
+        {{ end }}
+        {{ $caption = markdownify $caption }}
+        <a class="gallery-link" href="{{ .Permalink }}" data-lightbox="x" data-title="{{ htmlUnescape $caption }}">
+            <img class="gallery-thumb"  src="{{ $resized.Permalink }}" title="{{ $caption }}" />
+        </a>
+    {{ end }}
+{{ end }}
+</div>

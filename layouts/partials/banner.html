@@ -1,0 +1,12 @@
+{{ with .Site.Params.bannerImage }}
+  {{ if (in . "://") }}
+    <div id="banner" style="background-image:url('{{ . | absURL }}');"></div>
+  {{ else }}
+    {{ if (fileExists (printf "static/images/%s" .)) }}
+      {{ $banner := (printf "/images/%s" .) }}
+      <div id="banner" style="background-image:url('{{ $banner | absURL }}');"></div>
+    {{ else }}
+      <div id="banner" style="background-image:url('{{ . | absURL }}');"></div>
+    {{ end }}
+  {{ end }}
+{{ end }}
