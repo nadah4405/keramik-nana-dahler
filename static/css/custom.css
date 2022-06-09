@@ -43,3 +43,11 @@
     max-width: none;
     display: inline;
 }
+
+.postShorten.postShorten--thumbnailimg-bottom .postShorten-thumbnailimg img.thumbnail-image {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    max-width: 100%;
+    object-fit: scale-down;
+}

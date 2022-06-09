@@ -23,6 +23,14 @@
       </div>
     </div>
   </article>
+  <section class="postShorten-group main-content-wrap">
+    {{/* Iterate only over pages of the same type as this section. */}}
+    {{ $paginator := .Paginate (where .Data.Pages "Type" .Type) }}
+    {{ range $paginator.Pages }}
+      {{ .Render "summary" }}
+    {{ end }}
+    {{ partial "pagination.html" . }}
+  </section>
   {{ partial "footer.html" . }}
 </div>
 </div>
