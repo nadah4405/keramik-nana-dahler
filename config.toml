@@ -12,7 +12,7 @@
 # For developpers, if you modify this theme, put your images in `source/images` folder and
 # use grunt task `build` to synchronize assets
 
-baseURL = "https://mlange-42.gitlab.io/keramik-nana-dahler"
+baseURL = "https://nadah4405.github.io/keramik-nana-dahler/"
 languageCode = "de-de"
 defaultContentLanguage = "de-de"
 title = "Nana Dahler Keramik"
