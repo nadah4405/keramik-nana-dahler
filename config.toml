@@ -68,7 +68,7 @@ canonifyurls = true
 [[menu.main]]
   weight = 3
   identifier = "galleries"
-  name = "Fotogallerie"
+  name = "Fotogalerie"
   pre = "<i class=\"sidebar-button-icon fas fa-lg fa-images\" aria-hidden=\"true\"></i>"
   url = "/gallery/"
 

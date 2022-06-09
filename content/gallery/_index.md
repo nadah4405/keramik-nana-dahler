@@ -1,5 +1,5 @@
 ---
-title: Fotogallerie
+title: Fotogalerie
 showDate: false
 comments: false
 ---
