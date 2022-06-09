@@ -1,0 +1,45 @@
+#cover {
+    width: 250px;
+}
+
+#main {
+    padding-top: 0 !important;
+}
+
+#banner {
+    margin-left: 20px;
+    margin-right: 20px;
+    width: calc(100% - 40px);
+    height: 150px;
+    margin-bottom: 1em;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.sidebar-profile-picture {
+    border-radius: 0 !important;
+}
+
+#sidebar ul.sidebar-buttons li.sidebar-button .sidebar-button-sub-link .sidebar-button-desc {
+    padding-left: 52px;
+}
+
+.sidebar-sub-buttons {
+    display: none;
+}
+
+.gallery-wrap {
+    width: 100% !important;
+}
+
+.gallery-link {
+    width: auto;
+    max-width: none;
+    display: inline;
+}
+
+.post .post-content .gallery-thumb {
+    width: auto;
+    max-width: none;
+    display: inline;
+}
