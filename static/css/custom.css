@@ -16,7 +16,11 @@
     background-size: 100%;
 }
 
-.sidebar-profile-picture {
+.sidebar-profile {
+    height: auto !important;
+}
+
+img.sidebar-profile-picture {
     border-radius: 0 !important;
 }
 
