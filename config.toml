@@ -46,7 +46,7 @@ canonifyurls = true
   bio = "Super bio with markdown support **COOL**"
   job = "Keramikerin"
   location = "Unterwegs"
-  picture = "logo.jpg"
+  picture = "logo.svg"
 
 # ------------
 # Sidebar menu
