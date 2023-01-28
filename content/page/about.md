@@ -22,7 +22,7 @@ seit 1998 eigene Werkstatt, zunächst in Berlin-Kreuzberg.
 
 2017 - 2021 in Niederösterreich
 
-seit 2022 neuer Werstattbau in Sachsen
+seit 2022 neuer Werkstattbau in Sachsen
 
 ----
 
