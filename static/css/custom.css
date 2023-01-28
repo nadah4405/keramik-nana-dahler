@@ -34,6 +34,7 @@ img.sidebar-profile-picture {
 
 .gallery-wrap {
     width: 100% !important;
+    padding-top: 3rem;
 }
 
 .gallery-link {
