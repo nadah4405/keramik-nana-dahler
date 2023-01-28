@@ -73,7 +73,39 @@ canonifyurls = true
   url = "/gallery/"
 
 [[menu.main]]
+  weight = 1
+  identifier = "holzbrand"
+  name = "Holzbrand"
+  pre = ""
+  url = "/gallery/holzbrand/"
+  parent = "galleries"
+
+[[menu.main]]
+  weight = 2
+  identifier = "gefaesse"
+  name = "Gefäße geritzt"
+  pre = ""
+  url = "/gallery/gefaesse/"
+  parent = "galleries"
+
+[[menu.main]]
+  weight = 3
+  identifier = "kleinserien"
+  name = "Kleinserien"
+  pre = ""
+  url = "/gallery/kleinserien/"
+  parent = "galleries"
+
+[[menu.main]]
   weight = 4
+  identifier = "figuren"
+  name = "Figuren"
+  pre = ""
+  url = "/gallery/figuren/"
+  parent = "galleries"
+
+[[menu.main]]
+  weight = 5
   identifier = "fayence"
   name = "Fayence"
   pre = ""
@@ -81,11 +113,11 @@ canonifyurls = true
   parent = "galleries"
 
 [[menu.main]]
-  weight = 4
-  identifier = "holzbrand"
-  name = "Holzbrand"
+  weight = 6
+  identifier = "unikate"
+  name = "Unikate"
   pre = ""
-  url = "/gallery/holzbrand/"
+  url = "/gallery/unikate/"
   parent = "galleries"
 
 [[menu.main]]
