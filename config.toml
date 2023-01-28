@@ -43,7 +43,7 @@ canonifyurls = true
 # ------
 [author]
   name = "Nana Dahler Keramik"
-  bio = "Super bio with markdown support **COOL**"
+  bio = ""
   job = "Keramikerin"
   location = "Unterwegs"
   picture = "logo.svg"
